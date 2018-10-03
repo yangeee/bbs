@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PostItem from "./PostItem";
+import "./PostList.css";
 
 const data = [
     
@@ -47,8 +48,8 @@ class PostList extends Component {
     
     render(){
         return (
-            <div>
-                帖子列表：
+            <div className='container'>
+                <h2>话题列表：</h2>
                 <ul>
                     {this.state.posts.map(item => 
                     <PostItem
@@ -61,5 +62,7 @@ class PostList extends Component {
         );
     }
 }
+
+
 
 export default PostList;
