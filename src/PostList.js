@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import PostItem from "./PostItem";
 import "./PostList.css";
 
-const data = [
-    
-];
 class PostList extends Component {
     constructor(props) {
         super(props);
@@ -53,6 +50,7 @@ class PostList extends Component {
                 <ul>
                     {this.state.posts.map(item => 
                     <PostItem
+                      key = {item.id}
                       post = {item}//post只是一个参数，这里的意思是每一个postitem的post不一样，是item的数据
                       onVote = {this.handleVote}
                     />

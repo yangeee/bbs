@@ -21,7 +21,7 @@ function PostItem(props) {
                     创建时间：<span>{post.date}</span>
                 </div>
                 <div className='like'>
-                   <span><img src={like} onClick={handleClick} /></span>
+                   <span><img src={like} onClick={handleClick} alt='点赞'/></span>
                     <span>
                         {post.vote}
                     </span>
@@ -30,7 +30,7 @@ function PostItem(props) {
         );
 }
 
-PostItem.PropTypes = {//属性校验由儿子管，因为要管住自己的嘴巴
+PostItem.propTypes = {//属性校验由儿子管，因为要管住自己的嘴巴
     post: PropTypes.shape({
         id: PropTypes.number,
         title: PropTypes.string,
